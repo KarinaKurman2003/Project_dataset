@@ -13,7 +13,6 @@
 
 
 import pandas as pd
-import matplotlib as plt
 import numpy as np
 import streamlit as st 
 
@@ -289,25 +288,25 @@ st.markdown("From the previous data analysis, we found out that people with inco
 
 # In[35]:
 
-t = df2[(df2['educational-num'] >= 10) & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
-d = df2[(df2['educational-num'] < 10) & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
-y = np.array([t, d])
-mylabels = ["HIGHER_EDU", "SCHOOL"]
-d = plt.pie(y, labels = mylabels)
-plt.legend()
-st.pyplot(d)
+# t = df2[(df2['educational-num'] >= 10) & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
+# d = df2[(df2['educational-num'] < 10) & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
+# y = np.array([t, d])
+# mylabels = ["HIGHER_EDU", "SCHOOL"]
+# d = plt.pie(y, labels = mylabels)
+# plt.legend()
+# st.pyplot(d)
 
 
 # In[36]:
 
 
-t = df2[(df2['race'] == 'White') & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
-d = df2[(df2['race'] != 'White') & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
-y = np.array([t, d])
-mylabels = ["WHITE", "NOT"]
-q = plt.pie(y, labels = mylabels)
-plt.legend()
-st.pyplot(q)
+# t = df2[(df2['race'] == 'White') & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
+# d = df2[(df2['race'] != 'White') & (df2['fnlwgt'] >= 120000) & (df2['fnlwgt'] <= 150000)]['educational-num'].count()
+# y = np.array([t, d])
+# mylabels = ["WHITE", "NOT"]
+# q = plt.pie(y, labels = mylabels)
+# plt.legend()
+# st.pyplot(q)
 # plt.show() 
 
 st.markdown("People who get from 120k to 150k are most often those who got higher education and their race is white ")
@@ -322,21 +321,21 @@ st.header("Data Visualization: part 1")
 
 # z = sns.pairplot(df[['Gender', 'Age', 'EstimatedSalary', 'Purchased', 'Salary_median', 'Age_median']]);
 
-st.markdown("Purchased pie-chart:")
+# st.markdown("Purchased pie-chart:")
 
 # #### Purchased pie-chart:
 
 # In[35]:
 
 
-t = df[df['Purchased'] == 1]['Purchased'].count()
-d = df[df['Purchased'] == 0]['Purchased'].count()
-y = np.array([t, d])
-mylabels = ["Purchased", "NOT"]
-z = plt.pie(y, labels = mylabels)
-plt.legend()
-# plt.show() 
-st.pyplot(z)
+# t = df[df['Purchased'] == 1]['Purchased'].count()
+# d = df[df['Purchased'] == 0]['Purchased'].count()
+# y = np.array([t, d])
+# mylabels = ["Purchased", "NOT"]
+# z = plt.pie(y, labels = mylabels)
+# plt.legend()
+# # plt.show() 
+# st.pyplot(z)
 
 st.markdown("Age of users:")
 # #### Age of users:
