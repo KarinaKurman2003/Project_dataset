@@ -25,6 +25,7 @@ st.header("Reading Data from computer")
 
 df = pd.read_csv("/Users/kurmankarina/Desktop/Social_Network_Ads.csv")
 df.head(5)
+st.write(df)
 
 # In[6]:
 
@@ -39,9 +40,8 @@ df.describe()
 
 # In[8]:
 
-st.code("""
+
 df.isna().sum()
-""")
 
 
 # In[9]:
@@ -236,6 +236,7 @@ st.markdown("Checking the data")
 
 df2 = pd.read_csv("/Users/kurmankarina/Desktop/test.csv")
 df2.head(5)
+st.write(df2)
 
 
 # In[29]:
